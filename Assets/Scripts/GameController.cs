@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     public List<Bird> Birds;
 
     public List<Enemy> Enemies;
-    private YellowBird _shotBird;
+    private Bird _shotBird;
     public BoxCollider2D TapCollider;
 
     public GameObject gameEnd, gameWin;
@@ -29,8 +29,10 @@ public class GameController : MonoBehaviour
         {
             Enemies[i].OnEnemyDestroyed += CheckGameEnd;
         }
+
         TapCollider.enabled = false;
         SlingShooter.InitiateBird(Birds[0]);
+        _shotBird = Birds[0];
     }
 
     public void ChangeBird()

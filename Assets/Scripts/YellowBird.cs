@@ -15,7 +15,7 @@ public class YellowBird : Bird
         }
     }
 
-    public void OnTap()
+    public override void OnTap()
     {
         Boost();
     }

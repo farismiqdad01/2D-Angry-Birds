@@ -75,5 +75,9 @@ public class Bird : MonoBehaviour
     {
         _state = BirdState.HitSomething;
     }
+    public virtual void OnTap()
+    {
+
+    }
 
 }
